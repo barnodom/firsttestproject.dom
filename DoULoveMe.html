@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <Link rel="icon" href="tomLove3.png">
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .container{
+            background-color: rgb(236, 163, 232);
+            padding: 1rem;
+            border-radius: 10px;
+            width: 280px;
+        }
+        .btn{
+            padding: 0.5rem 2rem;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .btnPrimary{
+            color: white;
+            background-color: rgb(170, 92, 244);
+
+        }
+        .btnSecondary{
+            color: azure;
+            padding: 0.5rem 1rem;
+            background-color: rgb(236, 87, 229);
+        }
+        .moving{
+            margin-left: 110px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h2 class="text">ស្រឡាញ់ខ្ញុំដែរទេ? &#128151 &#128158</h2>
+        <button class="btn btnPrimary">Yes</button>
+        <button class="btn btnSecondary ">No</button>
+    </section>
+    <script>
+        const btnAgree = document.querySelector(".btnPrimary");
+        const btnDisagree = document.querySelector(".btnSecondary");
+        const text = document.querySelector(".text");
+        btnAgree.addEventListener("click", () => {
+            text.innerText = "តោះរៀបការ My love ";
+        });
+        btnDisagree.addEventListener("mouseover" , ()=>{
+            if (btnDisagree.classList.contains("moving"))
+            {
+                btnDisagree.classList.remove("moving");
+            }else {
+                btnDisagree.classList.add("moving");
+            }
+        })
+
+    </script>
+</body>
+</html>
